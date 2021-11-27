@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to my website',
+  title: 'Welcome To My Website',
   tagline: 'Nathan Burns',
   url: 'https://albinogazelle.github.io',
   baseUrl: '/',
@@ -16,6 +16,7 @@ const config = {
   organizationName: 'albinogazelle', // Usually your GitHub org/user name.
   projectName: 'albinogazelle.github.io', // Usually your repo name.
   deploymentBranch: 'main',
+  trailingSlash: false,
 
   presets: [
     [
