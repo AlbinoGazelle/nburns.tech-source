@@ -14,11 +14,11 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
        {/*  <img src={bannerImage}></img> */} 
-        <div className={styles.buttons}>
+       {/* <div className={styles.buttons}>
          {  <Link
             className="button button--secondary button--lg"
             to="https://github.com/AlbinoGazelle">
-            Github 👩‍💻
+            Github 👨‍💻
           </Link> }
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,9 +27,9 @@ function HomepageHeader() {
             to="/docs/intro">
             LinkedIn 👨‍💼
           </Link> }
-        </div>
+        </div> */}
       </div>
-    </header>
+  </header>
   );
 }
 

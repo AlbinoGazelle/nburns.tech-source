@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome To My Website',
+  title: 'Welcome',
   tagline: 'Nathan Burns',
   url: 'https://albinogazelle.github.io',
   baseUrl: '/',
@@ -75,16 +75,18 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          /* {to: '/blog', label: 'Blog', position: 'left'},
-          {
+          
+          {to: '/blog', label: 'Blog', position: 'left'},
+          /* {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
-          }, */
+          },  */
         ],
       },
       footer: {
-        style: 'dark',
+        //commented out so override in custom.css works
+        //style: 'dark',
         links: [
           {
             title: 'Docs',
@@ -96,20 +98,17 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Socials',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Github',
+                href: 'https://github.com/AlbinoGazelle',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+              
             ],
           },
           {
@@ -120,13 +119,13 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'WWU Cybersecurity Club',
+                href: 'https://wwucyber.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Nathan Burns. Built with Docusaurus.`,
       },
       prism: {
         darkTheme: darkCodeTheme,
