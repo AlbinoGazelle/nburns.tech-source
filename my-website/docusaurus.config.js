@@ -63,10 +63,10 @@ const config = {
             defaultMode: 'dark',
         },
       navbar: {
-        title: 'My Site',
+        title: 'Home',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Home Logo',
+          src: 'img/dice.svg',
         },
         items: [
           {
