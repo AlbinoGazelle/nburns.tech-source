@@ -59,6 +59,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+        colorMode: {
+            defaultMode: 'dark',
+        },
       navbar: {
         title: 'My Site',
         logo: {
@@ -126,8 +129,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        theme: lightCodeTheme,
+        
       },
     }),
 };
