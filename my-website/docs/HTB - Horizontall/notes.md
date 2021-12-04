@@ -122,35 +122,52 @@ Required adding hostname to /etc/hosts, maybe we have some subdomains?
 Found api-prod subdomain with wfuzz, added to /etc/hosts.
 
 Result from going to api-prod.horizontall.htb:
+  
 ![image](/img/horizontall/welcome.png)
 
 Time to do some enumeration on that subdomain.
 
 Found some directories, one is /admin
-![image](/img/horizontall/admin.png)
+  
+![image](/img/horizontall/admin.png)  
+
 Research exploits for strapi
 Find some on exploit-db but don't know the version number of whats running on the host.
 Inspecting one of the exploits gives me this url to check the version:
+  
 ![image](/img/horizontall/version.png)
+
 Our version is vulnerable to the exploit on [exploit-db](https://www.exploit-db.com/exploits/50239)
 Use exploit to get credentials for admin user:
+  
 ![image](/img/horizontall/admin_creds.png)
+
 Now that I have a JWT token I can exploit the other CVE using this [script](https://github.com/z9fr/CVE-2019-19609/blob/main/exploit.py) to get a reverse shell on the box.
 
 Running second stage exploit:
+  
 ![image](/img/horizontall/second_stage.png)
+
 Getting a shell:
+  
 ![image](/img/horizontall/init_shell.png)
 
 Need to get root
 Getting the port fowarding was tricky, had to lookup guide.
 Inspect machine to see what services are running, seeing laravel running locally so use chisel to port foward to attacker machine:
 On client:
-![image](/img/horizontall/chisel_client.png)]
+  
+![image](/img/horizontall/chisel_client.png)
+
 On attacker:
+  
 ![image](/img/horizontall/chisel_server.png)
+
 Now I can access the laravel service on my attacker machine:
+  
 ![image](/img/horizontall/laravel.png)
+
 Do some googling and find an exploit for this laravel version [here](https://github.com/nth347/CVE-2021-3129_exploit)
 Run the exploit and I can cat the root flag:
+  
 ![image](/img/horizontall/root_flag.png)
