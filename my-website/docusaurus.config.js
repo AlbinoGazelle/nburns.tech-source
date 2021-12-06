@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'albinogazelle', // Usually your GitHub org/user name.
   projectName: 'albinogazelle.github.io', // Usually your repo name.
   deploymentBranch: 'main',
