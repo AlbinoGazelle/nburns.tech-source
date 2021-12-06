@@ -1,6 +1,7 @@
 ---
 title: Toy Workshop - Web
 sidebar_position: 3
+description: Walkthrough for the HackTheBox 2021 Cyber Santa competition challenge Toy Workshop in the web category.
 ---
 ## Challenge Name: Toy Workshop
 ### Topic: Web

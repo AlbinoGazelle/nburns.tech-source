@@ -1,7 +1,7 @@
 ---
 title: Baby Apt - Forensics
 sidebar_position: 2
-description: I am testing descriptions
+description: Walkthrough for the HackTheBox 2021 Cyber Santa competition challenge Baby Apt in the forensics category.
 ---
 ## Challenge Name: Baby Apt
 ### Topic: Forensics
