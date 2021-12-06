@@ -1,6 +1,6 @@
 ---
-title: Notes/Walkthrough
-sidebar_position: 2
+title: Horizontall
+sidebar_position: 3
 ---
 
 ## Horizontall

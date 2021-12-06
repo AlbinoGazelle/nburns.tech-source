@@ -3,7 +3,7 @@ title: Notes/Walkthrough
 sidebar_position: 2
 ---
 
-## Box Name
+## Box Name:
 ## Enumeration:
 ### NMAP
 ```bash
