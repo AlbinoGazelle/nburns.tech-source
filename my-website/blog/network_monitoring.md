@@ -2,10 +2,12 @@
 slug: network_mon
 title: Network Monitoring On A Budget
 authors: nathan
-tags: [hello, docusaurus]
+tags: [networking, security]
 ---
 
 I was fairly bored over thanksgiving weekend so I thought it'll be a good time to finally setup some home network monitoring I've been wanting to do for awhile. I had some raspberry pi 4's collecting dust so I decided to use them as hosts.
+
+<!--truncate-->
 
 ## Materials
 
