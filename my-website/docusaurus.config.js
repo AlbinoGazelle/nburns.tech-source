@@ -41,13 +41,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/albinogazelle/nburns.tech-source/my-website/docs',
+          //editUrl: 'https://github.com/albinogazelle/nburns.tech-source/my-website/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/albinogazelle/nburns.tech-source/my-website/blog',
+          //editUrl:
+            //'https://github.com/albinogazelle/nburns.tech-source/my-website/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
