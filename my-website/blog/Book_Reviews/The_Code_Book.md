@@ -3,6 +3,7 @@ slug: code_book
 title: The Code Book
 authors: nathan
 tags: [cryptography, books, review]
+sidebar_position: 2
 ---
 
 # The Code Book
