@@ -27,7 +27,7 @@ const FeatureList = [
     Svg: require('../../static/img/home_dice_3.svg').default,
     description: (
       <>
-        You can contact me at my email (coming soon), or add me as a connection on my <a href="https://www.linkedin.com/in/nathan-burns-3613351b5/">linkedIn</a> 
+        You can contact me at my email (coming soonish), or add me as a connection on my <a href="https://www.linkedin.com/in/nathan-burns-3613351b5/">linkedIn</a> 
       </>
     ),
   },

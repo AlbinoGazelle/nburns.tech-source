@@ -10,13 +10,13 @@ Here's a list of what i'm currently reading or books I plan on reading in the fu
 
 Make sure to keep an eye on my [blog](/blog) for reviews for these books once I finish them.
 
+<!--truncate-->
+
 ### Security Engineering: A Guide to Building Dependable Distributed Systems by Ross Anderson
 I'm about halfway through this book and it's already changed how I look at systems and system security. Absolutely amazing and a required read for any security professional, no matter the field.
 
 ### Project Hail Mary by Andy Weir
 Looking to branch into Sci-Fi more and this was recommended to me by a friend.
-
-<!--truncate-->
 
 ### Hyperion by Dan Simmons
 Finished reading Dune and someone told me this was fairly similar, also Sci-Fi.
