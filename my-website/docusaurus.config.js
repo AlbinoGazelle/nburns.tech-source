@@ -81,11 +81,16 @@ const config = {
           },
           
           {to: '/blog', label: 'Blog', position: 'left'},
-          /* {
-            href: 'https://github.com/facebook/docusaurus',
+          {
+            href: 'https://github.com/AlbinoGazelle',
             label: 'GitHub',
             position: 'right',
-          },  */
+          }, 
+          {
+            href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
+            label: 'LinkedIn',
+            position: 'right',
+          }, 
         ],
       },
       footer: {
