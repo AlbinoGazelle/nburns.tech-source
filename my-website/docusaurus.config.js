@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nathan\'s Website',
+  title: 'Nathan\'s Blog',
   tagline: 'Welcome',
   url: 'https://albinogazelle.github.io',
   baseUrl: '/',
