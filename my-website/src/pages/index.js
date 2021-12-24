@@ -13,21 +13,20 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-       {/*  <img src={bannerImage}></img> */} 
-       {/* <div className={styles.buttons}>
+       { <div className={styles.buttons}>
          {  <Link
             className="button button--secondary button--lg"
-            to="https://github.com/AlbinoGazelle">
-            Github 👨‍💻
+            to="/docs/THM - Advent Of Cyber/Introduction">
+            Advent of Cyber Walkthrough
           </Link> }
 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {/* { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {  <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
             LinkedIn 👨‍💼
-          </Link> }
-        </div> */}
+          </Link> }  */}
+        </div> }
       </div>
   </header>
   );
