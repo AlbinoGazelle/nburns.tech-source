@@ -66,6 +66,7 @@ const config = {
         colorMode: {
             defaultMode: 'dark',
         },
+        metadata: [{name: 'keywords', content: 'cybersecurity, blog, tryhackme, hackthebox, books, hacker, IT, information technology, walkthroughs, tutorials'}],
       navbar: {
         title: 'Home',
         logo: {
