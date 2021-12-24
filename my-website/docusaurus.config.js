@@ -83,8 +83,8 @@ const config = {
           
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/AlbinoGazelle',
-            label: 'GitHub',
+            href: '/certificates',
+            label: 'Certificates',
             position: 'right',
           }, 
           {
