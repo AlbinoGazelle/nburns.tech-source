@@ -3,7 +3,7 @@ title: How It Happened (Day 22)
 sidebar_position: 23
 ---
 ## Topic: Blue Teaming
-This challenge involved 
+This challenge involved analyzing a malicious document that contained macros. We use the tool `oledump.py` to print out the encoded payload and then use `cyberchef` to decode the encoded payload. After we decode it we discover it contains the original email with hardcoded credentials. 
 
 ### Questions:
 1. What is the username (email address of Grinch Enterprises) from the decoded script?  
