@@ -17,7 +17,7 @@ function HomepageHeader() {
          {  <Link
             className="button button--secondary button--lg"
             to="/docs/THM - Advent Of Cyber/Introduction">
-            Advent of Cyber Walkthrough
+           New: Advent of Cyber Walkthrough
           </Link> }
 
           {/* { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

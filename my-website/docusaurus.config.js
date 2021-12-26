@@ -99,12 +99,20 @@ const config = {
         //style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Docs and Tutorials',
             items: [
               {
-                label: 'Docs and Tutorials',
+                label: 'Welcome',
                 to: '/docs/welcome',
               },
+              {
+                  label : 'Advent Of Cyber',
+                  to: '/docs/THM - Advent Of Cyber/Introduction'
+              },
+              {
+                  label: 'Network Monitoring',
+                  to: '/docs/network_mon'
+              }
             ],
           },
           {
@@ -118,6 +126,14 @@ const config = {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
               },
+              {
+                label: 'TryHackMe',
+                href: 'https://tryhackme.com/p/Albino'
+            },
+            {
+                label: 'HackTheBox',
+                href: 'https://app.hackthebox.com/users/448103'
+            },
               
             ],
           },
@@ -132,6 +148,7 @@ const config = {
                 label: 'WWU Cybersecurity Club',
                 href: 'https://wwucyber.com',
               },
+              
             ],
           },
         ],

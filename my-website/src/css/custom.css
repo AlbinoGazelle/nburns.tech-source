@@ -15,7 +15,8 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
-  --ifm-button-background-color: #830b0b;
+  --ifm-button-background-color: #0000;
+  --ifm-button-color: #0000;
   --ifm-footer-title-color: #f0e7e7;
   --ifm-footer-color:  #f0e7e7;
 }
