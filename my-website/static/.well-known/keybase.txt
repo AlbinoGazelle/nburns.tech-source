@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/albino13
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nburns.tech
+  * I am albino13 (https://keybase.io/albino13) on keybase.
+  * I have a public key with fingerprint 657A 212E 2EB3 89C7 F955  4B1B 64C0 5901 63DB 7D59
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101b09f4431d9f5f0bdd715e9f03eacd87e8549acbfeba0d3b2f77be882d6c4ab120a",
+      "fingerprint": "657a212e2eb389c7f9554b1b64c0590163db7d59",
+      "host": "keybase.io",
+      "key_id": "64c0590163db7d59",
+      "kid": "0101b09f4431d9f5f0bdd715e9f03eacd87e8549acbfeba0d3b2f77be882d6c4ab120a",
+      "uid": "7268970ba8cda27a191f5056532e5919",
+      "username": "albino13"
+    },
+    "service": {
+      "hostname": "nburns.tech",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1640734582,
+  "expire_in": 157680000,
+  "prev": "3de0bee0d6095006beca62d8d61a112260a7650d656f160608050a70f5db523a",
+  "seqno": 3,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIrAnicrVJbbA1BGD6nSrUIQSM8CIsmqmpm98zs7olLBEFJpG51zTGzM9uunu6e
+7u5pNUIi4q4eXFPRuETcQhB9URVtiYYmVaRCSBpBpKElmog2FWYb3jyal8l8//d9
+/zd//gfDBoQywucbJ7XenrT6ULi54XgyRJpPl22VqMMqpOhWqZj3XzzOuOfHii0m
+RSUAAaRANyMRBTLdRCagjKkQcd0ECicG01SuoYhODGpySgBTqGyqKuWaJjNsRAiF
+MiBSjmRadiF3E65l+8IWI5XIUOYyp4qmG6qpIxShkOKIAZAOIFYYVRnShbDI8QKF
+CEeJx3MtR2DiEeuP9w/+f86d7LdTZazpKqBEMxiRVQJ1aCKAMFJkjnQY9E163LVJ
+CRdsEqeW7UBF2pYjCbTMMngw2OAnfxg2Tbq2l+tzo0hIE67jO4YTF4Ui30940UDo
+VyQCZjmnsT8eMeHKxBiFooy7nuXYUhQKpuFbgSnEEaAqEaTJORLfkrBcHrMCBlKx
+BsQJ+vAyYakwDijngGGgIwAw5QbBMtMYhgRCWcaAqBiJMsImxAADDSABARMximQl
+mIrHS21HiioiJikUlp5VaBM/6XJpW2P9htRQOCM0aGBKsF6hjPQRf5euc1zar03Z
+O0dOHtURr+nOevGpc3v6yjk7RufFS4Y/WiwVFJc/zW6+1H16WvaKpVVju37WHwZ3
+d715XnHyWE/+xb2ZU2bcrOwq//B1ecH9NeFvs6ZlNh6M9Ux9fWBB15H1BXrKRvNJ
+07zLSxY2Xjk0OJQar6u/pXmtORMrT72sOfpiT9Uw5/OM97M/Vv/60UPO1tD87Pk3
+3y0uGddQOff66y9DF77C586UDG2bAGrP9a5KZqnSvI/amMEP1y37VvP9Tv7uqty+
+fehhSkv7olEnbsy83Rdesz9vYnva27yGx9/duuiKjrVV07V7z1ZfuFhbee3lT8Wd
+XJqs3jyft5YO6ckqb2sZf7W6d/PxtDlNvwHd8kPe
+=LuiX
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/albino13
+
+==================================================================
