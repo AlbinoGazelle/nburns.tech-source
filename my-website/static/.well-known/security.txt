@@ -1,4 +1,4 @@
-Contact: mailto:security@nburns.tech
+Contact: https://nburns.tech/contact
 Encryption: https://keybase.io/albino13
 Preferred-Languages: en
 
