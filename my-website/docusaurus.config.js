@@ -20,6 +20,7 @@ const config = {
   plugins: [
     // ... Your other plugins.
     [
+        
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         // ... Your options.
@@ -31,6 +32,7 @@ const config = {
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
       },
+      
     ],
   ],
   presets: [
@@ -40,6 +42,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: true,
           // Please change this to your repo.
           //editUrl: 'https://github.com/albinogazelle/nburns.tech-source/my-website/docs',
         },
@@ -63,6 +66,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+        hideableSidebar: true,
         colorMode: {
             defaultMode: 'dark',
         },
@@ -79,6 +83,7 @@ const config = {
             docId: 'welcome',
             position: 'left',
             label: 'Docs',
+            collapsible: true,
           },
           
           {to: '/blog', label: 'Blog', position: 'left'},
