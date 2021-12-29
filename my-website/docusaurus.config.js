@@ -119,12 +119,12 @@ const config = {
                 to: '/docs/welcome',
               },
               {
-                  label : 'Advent Of Cyber',
-                  to: '/docs/THM - Advent Of Cyber/Introduction'
+                  label : 'HackTheBox Notes',
+                  to: '/docs/hackthebox/intro'
               },
               {
-                  label: 'Network Monitoring',
-                  to: '/docs/network_mon'
+                  label: 'TryHackMe Notes',
+                  to: '/docs/tryhackme/intro'
               }
             ],
           },
