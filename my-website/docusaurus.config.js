@@ -146,7 +146,7 @@ const config = {
             title: 'More',
             items: [
                 {
-                    label: 'Contact Me',
+                    label: 'Contact',
                     to: '/contact',
                 },
               {
