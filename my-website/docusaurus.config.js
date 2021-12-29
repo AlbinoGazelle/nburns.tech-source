@@ -88,13 +88,21 @@ const config = {
           
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: '/certificates',
-            label: 'Certificates',
+            href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
+            className: 'linkedin-link',
+            'aria-label': 'linkedin',
             position: 'right',
           }, 
           {
-            href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
-            label: 'LinkedIn',
+            href: 'mailto:nathan@nburns.tech',
+            className: 'email-link',
+            'aria-label': 'email',
+            position: 'right',
+          }, 
+          {
+            href: 'https://github.com/AlbinoGazelle',
+            className: 'github-link',
+            'aria-label': 'github',
             position: 'right',
           }, 
         ],
@@ -121,16 +129,8 @@ const config = {
             ],
           },
           {
-            title: 'Socials',
+            title: 'Cyber Socials',
             items: [
-              {
-                label: 'Github',
-                href: 'https://github.com/AlbinoGazelle',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
-              },
               {
                 label: 'TryHackMe',
                 href: 'https://tryhackme.com/p/Albino'
@@ -145,15 +145,14 @@ const config = {
           {
             title: 'More',
             items: [
+                {
+                    label: 'Contact',
+                    to: '/contact',
+                },
               {
                 label: 'Blog',
                 to: '/blog',
               },
-              {
-                label: 'WWU Cybersecurity Club',
-                href: 'https://wwucyber.com',
-              },
-              
             ],
           },
         ],
