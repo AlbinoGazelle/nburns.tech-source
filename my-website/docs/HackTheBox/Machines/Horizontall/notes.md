@@ -1,5 +1,5 @@
 ---
-title: Horizontall
+title: Walkthrough
 sidebar_position: 3
 ---
 
