@@ -153,6 +153,10 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
+              {
+                  label: 'Certificates',
+                  to: '/certificates'
+              }
             ],
           },
         ],
