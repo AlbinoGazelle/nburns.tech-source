@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Nathan\'s Blog',
   tagline: 'Welcome',
-  url: 'https://albinogazelle.github.io',
+  url: 'https://nburns.tech',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
