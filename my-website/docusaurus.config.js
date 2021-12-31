@@ -119,7 +119,7 @@ const config = {
                 to: '/docs/welcome',
               },
               {
-                  label : 'HackTheBox Notes',
+                  label : 'HackTheBox Writeups',
                   to: '/docs/hackthebox/intro'
               },
               {
