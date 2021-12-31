@@ -1,5 +1,6 @@
+
 # Contact
-## It's pretty easy to contact me, here's a range of different platforms you can reach me at.
+#### It's pretty easy to contact me, here's a range of different platforms you can reach me at.
 
 ## Email:
 
