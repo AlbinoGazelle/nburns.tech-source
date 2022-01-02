@@ -115,8 +115,8 @@ const config = {
             title: 'Docs and Tutorials',
             items: [
               {
-                label: 'Welcome',
-                to: '/docs/welcome',
+                label: 'Tutorials',
+                to: '/docs/Tutorials/intro',
               },
               {
                   label : 'HackTheBox Writeups',
