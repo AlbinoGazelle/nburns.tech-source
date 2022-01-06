@@ -18,7 +18,7 @@ On January 4th 2022 at ~20:30 UTC my honeypot deployed in Oregon was attacked by
 My honeypot was attacked a total of 24 times from this IP address. Starting at 20:30 UTC and ending at 11:00 UTC. 
 
 ## Attack Vector
-This attack was caught by the [ADBHoney](https://github.com/huuck/ADBHoney) service running on my honeypot. ADBHoney describes itself as a "Low interaction honeypot designed for Android Debug Bridge over TCP/IP." Now I have some experience with ADB in a pior CTF so I understood a small bit of what this honeypot does. ADB is the Andriod Debug Bridge. It's essentially a protocol/tool that allows developers to communicate with andriod devices. It's used prominately in the emulation part of Andriod Studio. Unfortunately for us, the TCP section of the ADB protocol **does not** have any kind of authentication, leaving it open to attacks. This is what the honeypot sets up to gather samples.
+This attack was caught by the [ADBHoney](https://github.com/huuck/ADBHoney) service running on my honeypot. ADBHoney describes itself as a "Low interaction honeypot designed for Android Debug Bridge over TCP/IP." Now I have some experience with ADB in a prior CTF so I understood a small bit of what this honeypot does. ADB is the Andriod Debug Bridge. It's essentially a protocol/tool that allows developers to communicate with andriod devices. It's used prominately in the emulation part of Andriod Studio. Unfortunately for us, the TCP section of the ADB protocol **does not** have any kind of authentication, leaving it open to attacks. This is what the honeypot sets up to gather samples.
 
 ## Payload
 
