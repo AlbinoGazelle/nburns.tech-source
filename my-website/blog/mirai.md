@@ -1,6 +1,6 @@
 ---
 slug: mirai
-title: Analysis of Mirari Malware
+title: Analysis of Mirai Malware
 authors: nathan
 tags: [honeypot, reversing, malware]
 sidebar_position: 1
