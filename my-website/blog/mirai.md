@@ -104,6 +104,8 @@ Both the domain name and IP address are hardcoded, but these are both the same a
 
 There are references to POSTs and setting URL variables in the malware which tells me that's most likely the way communication is handled between the C2 and the bots.  
 
+## Closing Thoughts
+
 Unfortunately this is the extent of my analysis of this sample. My reversing skills arent where they should be in order to properly reverse this sample. I would try dynamic analysis and see what domains/IPs this sample tries to contact, but the x86 version was not available and I do not have any spare system capable of executing the other instruction sets besides my Raspberry Pi4s, so lookout for a potential part 2 of this post where I execute the malware in a lab environment.
 
 Thank you so much for reading this post. I learned a lot while investigating this sample and hopefully you learned something new reading this blog post. I hope to post more about my activities with my honeypot so keep an eye out for those posts when they drop.   

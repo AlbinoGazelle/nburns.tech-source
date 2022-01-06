@@ -16,8 +16,8 @@ function HomepageHeader() {
        { <div className={styles.buttons}>
          {  <Link
             className="button button--secondary button--lg"
-            to="/docs/tryhackme/events/Advent Of Cyber/Introduction">
-           New: Advent of Cyber Walkthrough
+            to="/blog/mirai">
+           New: Mirai Malware Investigation
           </Link> }
 
           {/* { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
