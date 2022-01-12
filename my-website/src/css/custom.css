@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  font-family: "Snell Roundhand", cursive; /* Elegant font rendering */
   --ifm-color-primary: #d12626;
   --ifm-footer-background-color: #0A0A14;
   --ifm-color-primary-dark: rgb(33, 175, 144);
