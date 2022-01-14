@@ -1,15 +1,15 @@
 ---
-slug: honeypot
-title: Tutorial - Installing and Configuring a Honeypot in Google Cloud
+slug: honeypot_1
+title: Tutorial - Installing and Configuring a Honeypot in Google Cloud (Part 1)
 sidebar_position: 2
+image: https://2.bp.blogspot.com/-uBOZREOgV8g/XAlWmAMiNFI/AAAAAAAAPNc/9u3q9RoHJyIjbq0f7GY_9SXicUOkNSCHgCLcBGAs/s1600/Winnie_the_Pooh_is_about_to_eat_honey.jpg
 ---
 
 I recently discovered that google cloud offers a $300 free credit to first time users so I decided to try and play around with setting up a honeypot to get some hands on experience with threat hunting and dipping a bit into reversing malware samples. 
 
 ## Prerequisites
 1. Google Cloud Account. (GCloud will require payment if you dont have free credit)
-2. Basic knowledge of linux commands and networking firewalls.
-3. Knowledge of Elasticsearch and Kibana will be a plus, but not required.
+2. Basic knowledge of firewalls.
 ## Virtual Machine Creation
 Something to remember is for a majority of cloud providers (Google Cloud, AWS, Azure, Digital Ocean) the steps will be the same, but screenshots and names of pages through this tutorial will be created assuming you are using GCloud, though this tutorial can easily be used to deploy a honeypot on any hosting provider.
 Another thing to note is please check the Terms of Service of whatever hosting provider you end up using, some may have provisions against hosting honeypots. I also cannot stress this enough **DO NOT HOST THIS ON YOUR HOME NETWORK**, it just isnt a good idea.
@@ -92,12 +92,21 @@ Please note that this will lockout everything else *besides* what IP you specifi
 
 Configure port ranges:
 
-![image](/img/honeypot_tut/chrome_5qbc40j8sv.png)
+![image](/img/honeypot_tut/chrome_WqqFATEFXI.png)
+
+:::info
+
+Notice how port **64295** is not in the rule, that's because its required to be open to Google's servers so we can use SSH through Google Cloud.
+
+:::
 
 Create that rule and we're finally done with Google Cloud configuration! Now we'll be installing and configuring the virtual machine itself and install our honeypot framework. 
 ## Next Steps
 
+Check out [Part 2](/docs/tutorials/honeypot_2) where we'll start installing and configuring the honeypot itself!
+
+If you have any comments or feedback, don't hesitate to contact me [here.](mailto:nathan@nburns.tech?Subject=Honeypot_Part1_Feedback)
+
 ## References
-
-
+1. https://github.com/telekom-security/tpotce (Documentation on what port numbers to allow/block)
 

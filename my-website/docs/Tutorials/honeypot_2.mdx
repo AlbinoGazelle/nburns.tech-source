@@ -1,0 +1,146 @@
+---
+slug: honeypot_2
+title: Tutorial - Installing and Configuring a Honeypot in Google Cloud (Part 2)
+sidebar_position: 3
+---
+
+Continuing from [Part 1](/docs/tutorials/honeypot_1) we'll be installing and configuring the honeypot itself in this part. 
+
+## Prerequisites
+1. Basic knowledge of linux commands and using `git` to clone a repository.
+2. Experience with kibana and elasticsearch will be a plus.
+
+## Installing The Honeypot
+To access the VM, we'll go ahead and click the "SSH" button on the homepage of VM Instances.
+![image](/img/honeypot_tut/chrome_ngjdgH1AVk.png)
+
+This will open a new window with an SSH session that allows us to run commands on the Virtual Machine instance.
+
+For this project, we'll be using [TPOT](https://github.com/telekom-security/tpotce)for practically everything. This is for numerous reasons:
+1. Provides an easy to use and centralized web panel for viewing data.
+2. Extremely easy to setup and configure.
+3. Easy to customize and contains multiple different installation types.
+
+Now back to the SSH session, we'll be running 4 different commands to install the framework and get it up and running *yes it's that easy*. 
+
+Debian does not come preinstalled with git, so first thing we'll have to do is install that:
+```bash
+sudo apt-get install git
+```
+
+After that we need to clone the repository where the framework is hosted:
+```bash
+git clone https://github.com/telekom-security/tpotce
+```
+
+After that completes run these two commands to start installation:
+```bash
+cd /tpotce
+sudo ./install.sh --type=user
+```
+Halfway through the installation you'll be presented with a screen similar to this:
+
+![image](/img/honeypot_tut/chrome_zQNHEzNzO8.png)
+
+For our inital setup we'll be picking **Standard**, this gives us the most "basic" honeypot with all the features we want (ELK Stack, NSM, and the honeypots we really want). I highly encourage you to checkout the other editions and try installing your own honeypots!
+
+:::tip
+Make sure input a good username and password on the subsequent screens!
+:::
+
+:::caution
+This command may take awhile to complete. The VM will restart once it's all finished. 
+:::
+
+After the command we entered earlier completes, you should see this screen as the VM restarts.
+
+![image](/img/honeypot_tut/chrome_7xNIbHHuij.png)
+## Configuration and Visualization
+### Changes
+After installing **TPOT**, the VM will have 2 important additions:
+1. SSH has been moved to port **65295**
+2. A web interface has been created at **https://<honeypot_ip>:64297**
+
+:::caution
+If you need to SSH to the honeypot again make sure you remember the port has been changed to 65295. An example ssh command would look like: `ssh -l username_here -p 64295 honeypot_ip_here`
+:::
+
+
+
+Now it's time to access the honeypots web panel. There's two panels of note, one on port 64294 and the main TPOT interface on 64297. Unfortunately due to security configurations that I **DO NOT** recommend changing, the interface on 64294 is not accessible.
+
+:::note
+<details>
+<summary>Why can't I access that webpanel?</summary>
+In order to access that webpanel you need to enable password based authentication to the virtual machine. That is disabled by default on google cloud and I do not recommend enabling it. I will **NOT** be providing instructions on how to enable it. Do it at your own risk!
+</details>
+:::
+
+Lets focus on the webpanel we can access, located on port 64297. Head to https://<honeypot_ip_here:64297 and you should be greeted with a login screen. Enter the credentials you set when installing TPOT and you'll be greeted with this screen:
+
+![image](/img/honeypot_tut/chrome_vj9gItAb0N.png)
+
+
+Here's a rundown on what each of these services are:
+ - Cockpit: This *would* be a remote management panel but due to security configurations is not accessible.
+ - Cyberchef: Cyberchef is the swiss army tool of security researchers. Allowing you to quickly decode and encode data. Read more about it [here.](https://github.com/gchq/CyberChef)
+ - Elasticsearch Head: Web frontend for interacting with an elasticsearch cluster. Not very useful for what we'll be doing but you can read more about it [here.](https://mobz.github.io/elasticsearch-head/)
+ - Kibana: Data visualization to the max. This is where we'll be able to visualize and query elasticsearch data. Most useful part of TPOT. Can read more about kibana and ELK stacks in general [here.](https://www.elastic.co/elastic-stack/)
+ - SecurityMeter: Cool data aggregation website created by the authors of TPOT. Aggregates data from all their honeypots and displays some cool information and statistics.
+ - SpiderFoot: Cool OSINT tool that queries multiple sources to gather info on IP addresses, domain names, and more. Can read more about it [here.](https://www.spiderfoot.net/documentation/)
+ - T-POT @ GitHub: Links back to the repo where we installed TPOT.
+
+
+ We'll take a little sneak peak into Kibana then I'll leave the rest up to you. Click the Kibana icon and you'll be sent to the kibana dashboard. We'll be taking a quick look at the main T-Pot dashboard and the Live Attack Map. 
+ 
+
+![image](/img/honeypot_tut/chrome_kfECeKdKoZ.png)
+
+ ### T-Pot Dashboard
+
+ This dashboard is where I spend a lot of time. It gives an overview of each individual honeypot and what data it's collected. Here's an example of some of the panels:
+
+
+![image](/img/honeypot_tut/chrome_pIGPgrAtqD.png)
+
+
+![image](/img/honeypot_tut/chrome_PqazD4tJ4A.png)
+
+![image](/img/honeypot_tut/chrome_pSBq3Ikpx2.png)
+
+![image](/img/honeypot_tut/chrome_sUgCy8cZUP.png)
+
+:::danger
+
+This honeypot was open to the internet for about 30 minutes and this is the amount of attacks it detected. The internet is a scary place!
+
+:::
+
+
+ ### T-Pot Live Attack Map
+
+ This is an example of one of the classic "cyber pew pew" maps but with some actual data behind it. Cool to keep open on a second monitor to monitor live attacks and be notified of anything interesting.
+
+![image](/img/honeypot_tut/chrome_qmkvvYt3YA.png)
+ 
+
+![image](/img/honeypot_tut/chrome_Gyy75bGEzm.png)
+
+ 
+![image](/img/honeypot_tut/chrome_auys2tYpus.png)
+
+
+ ## Conclusion
+
+ Over the course of this tutorial you've learned how to deploy VMs on Google cloud and how to install and configure a robust honeypot framework in T-Pot. T-Pot is extremely extensible and Kibana allows for so much customization you could spend weeks with the data you'll get. 
+
+ In my experience these dashboards contain the most interesting data:
+  - Adbhoney: This is where I found my malware sample for my Mirai Investigation.
+  - Glutton: This can have some interesting Hex encoded payloads in it.
+  - Mailoney: E-Mail is such a disfunctional ecosystem this honeypot always has crazy stuff in it. 
+
+But don't just take my word for it, go and explore all the other dashboards and honeypots! This is a create way to improve your threat hunting skills and maybe even your reverse engineering skills as well.
+
+This is one of my first in-depth tutorials so i'm looking for any feedback at all. Find an issue? Want to suggest another tutorial or blog topic? Please reach out to me [here!](mailto:nathan@nburns.tech?Subject=Suggestion/Feedback/Issue)
+
+Thank you so much for reading!
