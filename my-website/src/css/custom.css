@@ -51,6 +51,9 @@
 	height: 32px;
 	width: 32px;
 }
+.element.style {
+    background: rgb(1, 255, 255);
+}
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
