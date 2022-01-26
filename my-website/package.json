@@ -28,6 +28,7 @@
     "package.json": "^2.0.1",
     "plugin-image-zoom": "github:flexanalytics/plugin-image-zoom",
     "prism-react-renderer": "^1.2.1",
+    "pure-react-carousel": "^1.27.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "url-loader": "^4.1.1"
