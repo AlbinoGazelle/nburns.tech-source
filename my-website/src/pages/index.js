@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Layout
       title={`nburns.tech`}
-      description="Description will go into a meta tag in <head />">
+      description="Hacker, Reader, Hiker, and Friend.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
