@@ -79,7 +79,7 @@ const config = {
           alt: 'Home Logo',
           src: 'img/dice.svg',
         },
-        image: 'img/pp.png',
+        
         items: [
           {
             type: 'doc',
