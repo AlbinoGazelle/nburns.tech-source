@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nathan\'s Blog',
-  tagline: 'Hacking my way through it all',
+  tagline: 'Hacker, Reader, Hiker, and Friend.',
   url: 'https://nburns.tech',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -88,7 +88,7 @@ const config = {
           },
           
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
+          /* {
             href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
             className: 'linkedin-link',
             'aria-label': 'linkedin',
@@ -105,7 +105,7 @@ const config = {
             className: 'github-link',
             'aria-label': 'github',
             position: 'right',
-          }, 
+          },  */
         ],
       },
       footer: {
