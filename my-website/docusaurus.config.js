@@ -17,6 +17,7 @@ const config = {
   projectName: 'albinogazelle.github.io', // Usually your repo name.
   deploymentBranch: 'main',
   trailingSlash: false,
+
   plugins: [
     // ... Your other plugins.
     [
@@ -78,6 +79,7 @@ const config = {
           alt: 'Home Logo',
           src: 'img/dice.svg',
         },
+        image: 'img/favicon.svg',
         items: [
           {
             type: 'doc',
@@ -166,7 +168,6 @@ const config = {
       prism: {
         darkTheme: darkCodeTheme,
         theme: lightCodeTheme,
-        
       },
     }),
 };
