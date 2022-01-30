@@ -67,7 +67,9 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    
     ({
+        image: 'img/pp.png',
         hideableSidebar: true,
         colorMode: {
             defaultMode: 'dark',
