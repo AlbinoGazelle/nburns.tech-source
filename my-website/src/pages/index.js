@@ -34,8 +34,8 @@ function HomepageHeader() {
           <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/blog/mirai">
-           New: Mirai Malware Investigation
+            to="/blog/whispergate">
+           New: Deconstructing WhisperGate
           </Link> 
           <p classname="button button--secondary button--lg"></p>
           </div>

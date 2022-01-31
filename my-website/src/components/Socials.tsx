@@ -26,18 +26,7 @@ const socialDetails = [
 ];
 
 const getHoverIconColor = (site: string): string => {
-  switch (site) {
-    case 'linkedin':
-      return '#0a66c2';
-    case 'github':
-      return 'purple';
-    case 'twitter':
-      return '#c4302b';
-    case 'mail':
       return 'brown';
-    default:
-      return 'blue';
-  }
 };
 
 export const Socials = () => {
