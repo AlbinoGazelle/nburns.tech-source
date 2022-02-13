@@ -26,3 +26,8 @@ This was on Bill Gates 2021 reading list, so decided to check it out.
 
 ### Operator Handbook: Red Team + OSINT + Blue Team by Netmux
 Using this book as a basis for our blue team documentation for the WWU Cyber Defense team.
+
+### Intrusion Detection Honeypots by Chris Sanders
+This book relates heavily to my research on IDS honeypots at WWU. Expect a review of it soon.
+
+*Updated 2/12/2022*
