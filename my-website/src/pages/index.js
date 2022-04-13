@@ -8,7 +8,7 @@ import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import { Socials } from '../components/Socials';
+import SocialLinks from '../components/_Socials';
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -29,7 +29,7 @@ function HomepageHeader() {
           
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           
-          <Socials />
+          <SocialLinks />
 
           <div className={styles.buttons}>
           <Link
@@ -53,6 +53,7 @@ export default function Home() {
           
       <HomepageHeader />
       <main>
+        
         <HomepageFeatures />
       </main>
     </Layout>
