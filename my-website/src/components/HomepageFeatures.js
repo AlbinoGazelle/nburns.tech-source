@@ -5,11 +5,11 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
  
   {
-    title: 'Docs and Tutorials',
+    title: 'Docs',
     Svg: require('../../static/img/home_dice_1.svg').default,
     description: (
       <>
-        In <a href="/docs/welcome">docs</a> you'll find writeups for various cybersecurity challenges and competitions and also miscellaneous technical tutorials.
+        Looking for some technical tutorials and competition writeups? Check out the <a href="/docs/welcome">docs</a> section!
       </>
     ),
   },
@@ -18,12 +18,12 @@ const FeatureList = [
     Svg: require('../../static/img/home_dice_2.svg').default,
     description: (
       <>
-        My <a href="/blog">blog</a> contains my thoughts on various cybersecurity/technical topics and also my current reading list and book reviews.
+        My <a href="/blog">blog</a> contains my thoughts on various topics, malware analysis posts, what I'm reading, and more!
       </>
     ),
   },
   {
-    title: 'Contact Me',
+    title: 'Contact',
     Svg: require('../../static/img/home_dice_3.svg').default,
     description: (
       <>
@@ -40,7 +40,7 @@ function Feature({Svg, title, description}) {
         <Svg className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <a href={title}><h3>{title}</h3></a>
         <p>{description}</p>
       </div>
     </div>

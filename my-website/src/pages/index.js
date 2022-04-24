@@ -22,7 +22,7 @@ function HomepageHeader() {
               <Avatar
                 alt="Nathan Burns"
                 src={useBaseUrl('/img/pp.png')}
-                sx={{ width: 150, height: 150, m: 2 }}
+                sx={{ width: 200, height: 200, m: 2 }}
               />
             </Box>
           </Box>
@@ -34,8 +34,8 @@ function HomepageHeader() {
           <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/blog/whispergate">
-           New: Deconstructing WhisperGate
+            to="/blog/fun_with_hunting_user">
+           New: Fun With Threat Hunting - Malicious User
           </Link> 
           <p classname="button button--secondary button--lg"></p>
           </div>

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^0.6.7",
     "@docusaurus/core": "^2.0.0-beta.15",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.18",
     "@docusaurus/plugin-content-docs": "^2.0.0-beta.15",
     "@docusaurus/plugin-google-gtag": "^2.0.0-beta.15",
     "@docusaurus/preset-classic": "^2.0.0-beta.15",

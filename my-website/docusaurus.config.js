@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nathan\'s Blog',
-  tagline: 'Hacker, Reader, Hiker, and Friend.',
+  tagline: '"One lives not just for oneself, but for one\'s community" - RBG',
   url: 'https://nburns.tech',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -19,6 +19,17 @@ const config = {
   trailingSlash: false,
 
   plugins: [
+    [
+        "@docusaurus/plugin-client-redirects",
+        {
+          redirects: [
+            {
+              from: ["/Docs"],
+              to: "/docs/welcome",
+            },
+          ],
+        },
+      ],
     // ... Your other plugins.
     [
         
@@ -37,6 +48,8 @@ const config = {
     ],
     'plugin-image-zoom',
   ],
+  
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -92,6 +105,7 @@ const config = {
           },
           
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/about_me', label: 'About Me', position: 'left'},
           /* {
             href: 'https://www.linkedin.com/in/nathan-burns-3613351b5/',
             className: 'linkedin-link',
@@ -117,7 +131,7 @@ const config = {
         //style: 'dark',
         links: [
           {
-            title: 'Docs and Tutorials',
+            title: 'Docs',
             items: [
               {
                 label: 'Tutorials',
@@ -134,17 +148,20 @@ const config = {
             ],
           },
           {
-            title: 'Cyber Socials',
+            title: 'Projects',
             items: [
               {
-                label: 'TryHackMe',
-                href: 'https://tryhackme.com/p/Albino'
+                label: 'ToolBox',
+                href: 'https://github.com/AlbinoGazelle/ToolBox'
             },
             {
-                label: 'HackTheBox',
-                href: 'https://app.hackthebox.com/users/448103'
+                label: 'nburns.tech',
+                href: 'https://github.com/AlbinoGazelle/nburns.tech-source'
             },
-              
+            {
+               label: 'VNCExplore',
+               href: 'https://github.com/AlbinoGazelle/VNCExplore' 
+            }
             ],
           },
           {
@@ -159,8 +176,8 @@ const config = {
                 to: '/blog',
               },
               {
-                  label: 'Certificates',
-                  to: '/certificates'
+                  label: 'GitHub',
+                  to: 'https://github.com/AlbinoGazelle'
               }
             ],
           },
