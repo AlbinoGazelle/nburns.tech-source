@@ -1,0 +1,83 @@
+---
+slug: fun_with_hunting_user
+title: Fun With Threat Hunting - Malicious User
+authors: nathan
+tags: [threat hunting, detection, purple team]
+sidebar_position: 1
+---
+
+
+
+## Hello!  
+Welcome to the first part in a series I'm creating to help develop my threat hunting skills and share some knowledge with the community in the process. This part will focus on hunting for techniques used by a potentially malicious user such as privilege escalation, data exfiltration, and more.  
+
+
+Unless you've been under a rock for the past couple of months you've most likely heard of a new cybercrime group named LAPSUS$. This group utilizes social engineering and low technical complexity attacks to breach a target organization. They gain access to organizations by offering low-level employees monetary rewards in exchange for their credentials, once inside an organization they make attempts to escalate privileges and do reconnaissance to look for valuable data. 
+
+Thanks to [Bill Demirkapi](https://twitter.com/BillDemirkapi), we can see what LAPSUS$ does during an attack with some level of detail. I'll be following the steps Mandiant identified LAPSUS$ did during their breach of Sitel/SYKES, you can find these steps [here.](https://twitter.com/BillDemirkapi/status/1508527487655067660)  
+
+![image](/img/threat_hunt_user/mandiant_report_1.png)
+*Figure 1. Page 1 of Mandiant's Sitel/SYKES Intrusion Timeline*  
+
+## Scenario
+
+The scenario I've laid out is we are a member of the threat intelligence team at Happy Corp© and we've been tasked to make sure our organization hasn't also been breached by LAPSUS$. We have a couple of tools available to us, most notably being Splunk (our SIEM), VirusTotal (to lookup potentially malicious binaries), Talos (For finding the reputation of an IP/Domain), and various other open-source tools.
+
+## Initiate
+
+Now that we have a scenario, it's time to initiate the hunt. The first step in initiating is to identify a "trigger" for the hunt, in other words, what started this specific hunt? In our case, it's a historical incident (The Sitel/SYKES breach). After identifying the trigger we need to create an abstract. This is created so that once the hunt is selected for execution, we have an outline with details to help guide other hunters. 
+
+### Abstract
+
+Date: 4/23/2022 11:00 PM PDT  
+Initial Hypothesis: A known threat actor has breached a similar organization recently, we need to ensure the TTPs used in that breach are properly detected in our environment and to ensure that the threat group is not inside our network. This group typically purchases credentials from employees, looking for initial access through valid accounts ([T1078](https://attack.mitre.org/techniques/T1078/)) should be a priority.   
+Trigger: [Historical Incident (Sitel/SYKES breach)](https://venturebeat.com/2022/03/28/this-is-mandiants-timeline-for-the-okta-lapsus-breach-according-to-a-researcher/).  
+Hunt Priority: High
+
+
+## Execute
+
+Here's the fun part. This is where we start executing the hunt and looking through data. Using our abstract we know the steps this actor uses, including gaining initial access through valid accounts (T1078) and exploitation for privilege escalation (T1068). Let's start building some queries to check if we've seen this behavior in our environment. 
+
+When threat hunting it's extremely important to **know your logs**. In our scenario, we utilize Sysmon for log generation so being familiar with that format will allow this hunt to go smoothly. Let's look at common Sysmon Event IDs that could be related to this hunt:  
+
+File Creation: Sysmon Event 11  
+Network Connections (Including RDP): Sysmon Event 3   
+Process Creation: Sysmon Event 1  
+
+Let's start with Event 11:  
+
+Query: `index="sysmon" EventID=11`
+
+In our scenario that query gives us over 1,560 events in the past 30 days (!).   
+![image](/img/threat_hunt_user/eventid_11.png)  
+*Figure 2. EventID 11 Results*  
+
+Let's try to trim that down a bit. We know this actor group uses a web browser to download this file so we can exclude a lot of results by modifying our query to only include web browser downloads.  
+Query: 
+```bash
+index="sysmon" EventID=11 Image="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" OR Image="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+```  
+![image](/img/threat_hunt_user/eventid_11_refined.png)   
+*Figure 3. EventID 11 Results When Refined*  
+This gets us down to 11 events. While this is a lot better, it's important to remember that I'm in a lab environment with a very small number of total events. In an actual production environment employees would be downloading things all the time through a web browser, let's try to refine it again! 
+
+Ok, time for the last refinement. We know this threat actor downloads an **executable**. Let's refine our search to look for any executable downloaded from a web browser.  
+*Side Note: During this hunt, we're assuming the threat actor changed the filename of the privilege escalation tool they used. In the actual Sykel/SITEL breach, this was not the case (!).*  
+
+Query: 
+```bash
+index="sysmon" EventID=11  Image="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" OR Image="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe" AND file_name="*.exe"
+```  
+![image](/img/threat_hunt_user/eventid_11_refined_more.png)  
+*Figure 4. EventID 11 Results Even More Refined*  
+
+Amazing! This gets me down to just 4 events. Again, it's important to remember that this is a lab environment so in production that number will be orders of magnitude larger. If this query didn't refine my results down enough I'd have to utilize other tactics like looking for downloads after hours, looking through a specific window of time, or finding the user through other means and refining it that way.  
+
+Looking through the results of the refined query, let's see if we've found the event we're looking for.   
+Bingo! Look's like we've found the incident where a malicious user downloaded a known privilege escalation tool!   
+![image](/img/threat_hunt_user/eventid_11_bingo.png)   
+*Figure 5. Malicious User Downloading Privilege Escalation Tool*  
+This is amazing (for us, not the organization), we now have the compromised username and a timeframe to work from! Let's take a look at what this user's done. Our knowledge of EventIDs will come into play again in doing this.
+
+-- UNDER CONSTRUCTION --

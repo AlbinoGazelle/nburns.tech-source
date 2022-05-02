@@ -34,8 +34,8 @@ function HomepageHeader() {
           <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/blog/fun_with_hunting_user">
-           New: Fun With Threat Hunting - Malicious User
+            to="/docs/CTFs/NahamCon_2022/Intro">
+           New: NahamCon 2022 CTF Writeups
           </Link> 
           <p classname="button button--secondary button--lg"></p>
           </div>
