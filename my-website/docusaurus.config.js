@@ -27,6 +27,10 @@ const config = {
               from: ["/Docs"],
               to: "/docs/welcome",
             },
+/*             {
+                from: ["/resume"],
+                to: "/static/resume.pdf"
+            } */
           ],
         },
       ],
