@@ -2,6 +2,14 @@
 title: Click Me
 sidebar_position: 1
 ---
+## Challenge Description
+*I created a cookie clicker application to pass the time. There's a special prize that I can't seem to get.*  
+Attachments: click_me.apk
+### Author
+**M_alpha**
+
+### Solves
+**84/4034**
 
 ## Opening APK in ADB and JADX
 

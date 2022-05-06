@@ -80,4 +80,4 @@ Bingo! Look's like we've found the incident where a malicious user downloaded a 
 *Figure 5. Malicious User Downloading Privilege Escalation Tool*  
 This is amazing (for us, not the organization), we now have the compromised username and a timeframe to work from! Let's take a look at what this user's done. Our knowledge of EventIDs will come into play again in doing this.
 
--- UNDER CONSTRUCTION --
+-- UNDER CONSTRUCTION -- 
