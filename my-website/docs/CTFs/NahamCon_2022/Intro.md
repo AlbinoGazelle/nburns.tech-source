@@ -1,6 +1,7 @@
 ---
 title: Intro
 sidebar_position: 1
+image: /img/certificates/naham2022.png
 ---
 
 Over the past weekend I competed in the Capture The Flag portion of NahamCon 2022, which was setup by [NahamSec](https://twitter.com/NahamSec) and [John Hammond](https://twitter.com/NahamSec.). I've only done a couple CTFs before but I have to say this was the most fun I've ever had in one, the challenges were amazing, the staff were extremely kind, and the infrastructure stayed strong the entire time! I'm also extremely happy with my team's performance, placing 40th out of 4034 total teams. 
